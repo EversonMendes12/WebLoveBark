@@ -5,7 +5,7 @@
 
 ## Front End
   - Page: login, index e delivery(Store). Criada e editada do zero. 
-  - Utilizado apenas no front end o auxilio da ferramenta: Nicepage.com, exportado apenas parte do código HTML e alterado toda a estrutura para JSP, assim como também otimizado todo o código.
+  - Utilizado apenas no front end, auxilio da ferramenta: Nicepage.com, exportado apenas parte do código HTML e alterado toda a estrutura para JSP, assim como também otimizado todo o código.
   
 Print Index.jsp:
 
