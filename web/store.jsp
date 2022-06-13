@@ -9,7 +9,6 @@
 <jsp:include page="headler.jsp"/>
 
 <section class="u-align-center u-clearfix u-gradient u-valign-top u-section-store" id="carousel_38c4">
-      <div class="u-border-3 u-border-grey-dark-1 u-expanded-width u-line u-line-horizontal u-line-1"></div>
       <h1 class="u-custom-font u-font-oswald u-text u-text-body-alt-color u-text-default u-text-1">ID@PRODUTOS</h1>
       <p class="u-text u-text-2">ID@DESCRIÇÃO</p>
       <div class="u-list u-list-1">

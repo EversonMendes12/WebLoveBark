@@ -21,7 +21,7 @@ public class ConnectionFactory {
     public static final String conn = "jdbc:mysql://localhost:3306/bark-database?zeroDateTimeBehavior=CONVERT_TO_NULL";
     public static final String user = "root";
     public static final String password = "";
-    public static final String driver = "com.mysql.jdbc.Driver";
+    public static final String driver = "com.mysql.cj.jdbc.Driver";
        
     
     public static Connection getConnection(){
