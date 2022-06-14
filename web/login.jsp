@@ -1,56 +1,38 @@
-<%-- 
-    Document   : login
-    Created on : 9 de jun. de 2022, 17:04:59
-    Author     : PCRS
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="br.com.sorvetesbark.control.UsuarioDAO"%>
+<%@page import="br.com.sorvetesbark.model.Usuario"%>
 <!DOCTYPE html>
    
 <jsp:include page="headler.jsp"/>
 
 
 <section class="u-clearfix u-section-login" id="sec-c82c">
+    
+    <p><h1>Login</h1></p>  <!-- Titulo -->
+
+    <form method="post" class="" id="login-form">     <!-- action="" -->
+        <div class="">
+            <label for="username">
+                <i class=""></i>
+            </label>
+            <input type="text" name="username" id="username" placeholder="Digita sua conta">
+        </div>
+        <br/>
+        <div class="">
+            <label for="password">
+                <i class=""></i>
+            </label>
+            <input type="password" name="password" id="password" placeholder="Digita sua senha">
+        </div>
+        <br/>
+        <div class="">
+            <label for="password">
+                <i class=""></i>
+            </label>
+            <input type="submit" name="signin" id="signin" value="Login">
+        </div>
+    </form>  
 
     
-    <p>
-    <h1>Login</h1>
-    </p>
-
-    <!-- <form name="frmlogin" action="">
-        <td><input type="text" name="user" class="user"/></td>
-            </<tr>
-        <td><input type="password" name="passWd" class="passWd"/></td>
-            </tr>
-        <td><input type="button" value="Login" class="botao" onclick="validar()"/></td>
-  
-    </form> -->
-    
-    
-    <form action="login.jsp" method="get">
-        
-        Usuário: <input type="text" name="user"/>
-        Senha: <input type="password" name="passWd"/>
-        <input type="submit" value="Login" /><br/>
-
-    </form>
-    
-    
- <%
- 
-        String user = request.getParameter("user");
-        String passWd = request.getParameter("passWd");  
-       
-       UsuarioDAO dao = new UsuarioDAO();
-       
-       if(dao.checkLogin(user, passWd){
-                out.print("Bem vindo ");
-       }else{
-                out.print("Errado");
-       }
-        
- %>
     
  </section>
 
