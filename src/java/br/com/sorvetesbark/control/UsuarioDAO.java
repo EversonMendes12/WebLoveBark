@@ -20,32 +20,32 @@ import javax.swing.JOptionPane;
  * @author PCRS
  */
 public class UsuarioDAO {
-    
-    Connection conn;
-    
-    public UsuarioDAO() {
-        conn = ConnectionFactory.getConnection();
-    }
-    
-    public void cadastrar(Usuario c){          
+            
+     public void cadastrar(Usuario u) {
+        
+        Connection con = ConnectionFactory.getConnection();
+        
         PreparedStatement stmt = null;
-  
+
         try {
-            stmt = conn.prepareStatement("INSERT INTO users (user, name, nascimento, cpf, status, password)VALUES(?,?,?,?.?,?)");
-            stmt.setString(1, c.getUser());
-            stmt.setString(2, c.getNascimento());
-            stmt.setString(3, c.getCpf());
-            stmt.setBoolean(4, c.getStatus());
-            stmt.setString(5, c.getPassword());
-                    
+            stmt = con.prepareStatement("INSERT INTO users (user, name, nDate, cpf, sUser, passWd)VALUES(?,?,?,?,?,?)");
+            stmt.setString(1, u.getUser());
+            stmt.setString(2, u.getName());
+            stmt.setString(3, u.getDate());
+            stmt.setString(4, u.getCpf());
+            stmt.setBoolean(5, u.getStatus());
+            stmt.setString(6, u.getPassword());
+
             stmt.executeUpdate();
-            JOptionPane.showMessageDialog(null, "Usuário cadastrado com sucesso");
+            System.out.println("Salvo com sucesso!");
         } catch (SQLException ex) {
             System.out.println(ex);
         } finally {
-            ConnectionFactory.closeConnection(conn, stmt);
+            ConnectionFactory.closeConnection(con, stmt);
         }
+
     }
+
   
     
         public boolean checkLogin(String user, String password) {
@@ -58,7 +58,7 @@ public class UsuarioDAO {
 
         try {
 
-            stmt = conn.prepareStatement("SELECT * FROM users WHERE user = ? and password = ?");
+            stmt = conn.prepareStatement("SELECT * FROM users WHERE user = ? and passWd = ?");
             stmt.setString(1, user);
             stmt.setString(2, password);
 

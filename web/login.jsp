@@ -9,7 +9,7 @@
     
     <p><h1>Login</h1></p>  <!-- Titulo -->
 
-    <form method="post" class="" id="login-form">     <!-- action="" -->
+<form method="post" class="login" action="logar" id="login-form">     <!-- action="" -->
         <div class="">
             <label for="username">
                 <i class=""></i>
@@ -29,11 +29,10 @@
                 <i class=""></i>
             </label>
             <input type="submit" name="signin" id="signin" value="Login">
+            
+            <a href="cadastro.jsp">Cadastre-se</a>
         </div>
     </form>  
-
-    
-    
  </section>
 
 <jsp:include page="about.jsp"/>
