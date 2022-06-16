@@ -20,11 +20,14 @@ Print Index.jsp:
 ## Back End:
   
   - [x] Código fonte otimizado.
-  - [ ] Integrando com banco de dados MariaDb.
+  - [x] Integrando com banco de dados MariaDb.
 
 ###### Update 0.0.1 
 
-  - [ ] Integrado sistema login e cadastro.
+  - [ ] Integrado sistema login e cadastro.  [Realizando integração]
+
+###### Update 0.0.2
+
   - [ ] Integrado sistema loja virtual.
   - [ ] Integrado sistema carrinho virtual.
   - [ ] Integrado sistema online payment.
