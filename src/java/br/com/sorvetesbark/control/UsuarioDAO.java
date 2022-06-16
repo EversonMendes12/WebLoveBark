@@ -26,25 +26,45 @@ public class UsuarioDAO {
         Connection con = ConnectionFactory.getConnection();
         
         PreparedStatement stmt = null;
+        ResultSet rs = null;
+        boolean validaUser = false;
+                                
+                            //Verfifica se o usuário já existe no banco de dados.
+                            try {
+                             stmt = con.prepareStatement("SELECT * FROM users WHERE user = ?");
+                             stmt.setString(1, u.getUser());
+                             rs = stmt.executeQuery();
 
-        try {
-            stmt = con.prepareStatement("INSERT INTO users (user,name,date,cpf,status,password)VALUES(?,?,?,?,?,?)");
-            stmt.setString(1, u.getUser());
-            stmt.setString(2, u.getName());
-            stmt.setString(3, u.getDate());
-            stmt.setString(4, u.getCpf());
-            stmt.setBoolean(5, u.getStatus());
-            stmt.setString(6, u.getPassword());
+                                    if (rs.next()) {
+                                        validaUser = false;
+                                    }else {
+                                        validaUser = true;
+                                    }
 
-            stmt.executeUpdate();
-            //System.out.println("Salvo com sucesso!");
-         JOptionPane.showMessageDialog(null, "Salvo com sucesso!");
-        } catch (SQLException ex) {
-            System.out.println(ex);
-        } finally {
-            ConnectionFactory.closeConnection(con, stmt);
-        }
+                            } catch (Exception e) {
+                            }
+                     
+                    //Se usuário não existe, validaUser retorna TRUE.
+                    if (validaUser) {
+                            try {
+                                stmt = con.prepareStatement("INSERT INTO users (user,name,date,cpf,status,password)VALUES(?,?,?,?,?,?)");
+                                stmt.setString(1, u.getUser());
+                                stmt.setString(2, u.getName());
+                                stmt.setString(3, u.getDate());
+                                stmt.setString(4, u.getCpf());
+                                stmt.setBoolean(5, u.getStatus());
+                                stmt.setString(6, u.getPassword());
 
+                                stmt.executeUpdate();
+                                //System.out.println("Salvo com sucesso!");
+                             JOptionPane.showMessageDialog(null, "Salvo com sucesso!");
+                            } catch (SQLException ex) {
+                                System.out.println(ex);
+                            } finally {
+                                ConnectionFactory.closeConnection(con, stmt);
+                            }
+
+                    }
     }
 
   

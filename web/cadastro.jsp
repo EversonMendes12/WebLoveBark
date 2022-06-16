@@ -56,7 +56,7 @@
     </div>
   </div>  
 
-
+    <script src="js/sweetalert.js"></script>
+    <link rel="stylesheet" href="alert/dist/sweetalert.css">
 </section>
-
 <jsp:include page="footer.jsp"/>
