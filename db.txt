@@ -1,0 +1,54 @@
+CREATE TABLE Users (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    user VARCHAR(10),
+    name VARCHAR(20),
+    date VARCHAR(10),
+    cpf int,
+    status BOOLEAN,
+    password VARCHAR(15),
+    id_address int,
+    id_cart int,
+);
+
+CREATE TABLE Address (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT ,
+    Address VARCHAR(15),
+    numero int,
+    cep int,
+    cidade VARCHAR(15),
+    estado VARCHAR(4)
+);
+
+CREATE TABLE Cart (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT ,
+    statusVenda BOOLEAN,
+    id_products int(),
+);
+
+CREATE TABLE Products (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT ,
+    nameProduto VARCHAR(50),
+    descricao VARCHAR(255),
+    valor BIT,
+    id_category int,
+);
+
+CREATE TABLE Category (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT ,
+    description VARCHAR(20),
+    type int
+);
+ 
+
+
+ALTER TABLE Users ADD CONSTRAINT FK1
+FOREIGN KEY (id_address) REFERENCES Address(id);
+
+ALTER TABLE Users ADD CONSTRAINT FK2
+FOREIGN KEY (id_cart) REFERENCES Cart(id);
+
+ALTER TABLE Cart ADD CONSTRAINT FK1_CART
+FOREIGN KEY (id_products) REFERENCES Products(id);
+
+ALTER TABLE Products  ADD CONSTRAINT FK1_PRODUCTS
+FOREIGN KEY (id_category) REFERENCES Category(id);
