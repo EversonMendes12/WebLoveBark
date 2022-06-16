@@ -28,7 +28,7 @@ public class UsuarioDAO {
         PreparedStatement stmt = null;
 
         try {
-            stmt = con.prepareStatement("INSERT INTO users (user,name,date,cpf,status,password)VALUES(?,?,?,?,?,?)");
+            stmt = con.prepareStatement("INSERT INTO users (user, name, nDate, cpf, sUser, passWd)VALUES(?,?,?,?,?,?)");
             stmt.setString(1, u.getUser());
             stmt.setString(2, u.getName());
             stmt.setString(3, u.getDate());
@@ -37,8 +37,7 @@ public class UsuarioDAO {
             stmt.setString(6, u.getPassword());
 
             stmt.executeUpdate();
-            //System.out.println("Salvo com sucesso!");
-         JOptionPane.showMessageDialog(null, "Salvo com sucesso!");
+            System.out.println("Salvo com sucesso!");
         } catch (SQLException ex) {
             System.out.println(ex);
         } finally {
@@ -59,7 +58,7 @@ public class UsuarioDAO {
 
         try {
 
-            stmt = conn.prepareStatement("SELECT * FROM users WHERE user = ? and password = ?");
+            stmt = conn.prepareStatement("SELECT * FROM users WHERE user = ? and passWd = ?");
             stmt.setString(1, user);
             stmt.setString(2, password);
 

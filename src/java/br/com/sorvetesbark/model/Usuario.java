@@ -12,9 +12,7 @@ public class Usuario {
     private String date;
     private String cpf;
     private Boolean status;
-    private String password;  
-    private Address address;
-    private Cart cart;
+    private String password;   
 
     public int getId() {
         return id;
@@ -70,22 +68,6 @@ public class Usuario {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
-    }
-
-    public Cart getCart() {
-        return cart;
-    }
-
-    public void setCart(Cart cart) {
-        this.cart = cart;
     }
 
     

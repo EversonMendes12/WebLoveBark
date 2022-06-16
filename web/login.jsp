@@ -35,5 +35,5 @@
     </form>  
  </section>
 
-<jsp:include page="footer.jsp"/>
+<jsp:include page="about.jsp"/>
 
