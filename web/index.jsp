@@ -19,7 +19,7 @@
         <div class="u-carousel-inner u-gallery-inner" role="listbox">
           <div class="u-active u-carousel-item u-effect-fade u-gallery-item u-carousel-item-1">
             <div class="u-back-slide" data-image-width="1920" data-image-height="700">
-              <img class="u-back-image u-expanded" src="images/Pngtreesummericecreamicecream_920103.jpg">
+              <img class="u-back-image u-expanded" src="images/1.png">
             </div>
             <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-1">
               <h3 class="u-gallery-heading">Sample Title</h3>
@@ -28,7 +28,7 @@
           </div>
           <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-2">
             <div class="u-back-slide" data-image-width="1920" data-image-height="780">
-              <img class="u-back-image u-expanded" src="images/banner01.jpg">
+              <img class="u-back-image u-expanded" src="images/1.png">
             </div>
             <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-2">
               <h3 class="u-gallery-heading">Sample Title</h3>
@@ -37,7 +37,7 @@
           </div>
           <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-3" data-image-width="1070" data-image-height="423">
             <div class="u-back-slide u-back-slide-3" data-image-width="1070" data-image-height="423">
-              <img src="images/banner-sorvete.jpg" alt="" data-image-width="2000" data-image-height="1333" class="u-back-image u-expanded">
+              <img src="images/1.png" alt="" data-image-width="2000" data-image-height="1333" class="u-back-image u-expanded">
             </div>
             <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-3">
               <h3 class="u-gallery-heading"></h3>
@@ -248,4 +248,4 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
       </div>
     </section>
     
-<jsp:include page="about.jsp"/>
+<jsp:include page="footer.jsp"/>

@@ -23,14 +23,13 @@ public class register extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
    
-        String name = request.getParameter("name");
         String username = request.getParameter("user"); 
-        String password = request.getParameter("senha");
+        String name = request.getParameter("name");
         String date = "12-11-1196";
         String cpf = "12385241224";
         boolean status = false;
-        
-        
+        String password = request.getParameter("senha");
+                
         //out.print("Nome: " + name + "\n User: " + username + "\n password: " + password );
         
         UsuarioDAO dao = new UsuarioDAO();
@@ -38,12 +37,12 @@ public class register extends HttpServlet {
         
         //c.setNome(txtNome.getText());
         
-        u.setName(name);
         u.setUser(username);
+        u.setName(name);
         u.setDate(date);
-        u.setPassword(password);
-        u.setStatus(status);
         u.setCpf(cpf);
+        u.setStatus(status);
+        u.setPassword(password);
         
         dao.cadastrar(u);
 

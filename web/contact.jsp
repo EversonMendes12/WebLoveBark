@@ -80,4 +80,4 @@ c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
       </div>
     </section>
     
-<jsp:include page="about.jsp"/>
+<jsp:include page="footer.jsp"/>

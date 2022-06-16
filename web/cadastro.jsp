@@ -59,4 +59,4 @@
 
 </section>
 
-<jsp:include page="about.jsp"/>
+<jsp:include page="footer.jsp"/>
