@@ -7,7 +7,7 @@ CREATE TABLE Users (
     status BOOLEAN,
     password VARCHAR(15),
     id_address int,
-    id_cart int,
+    id_cart int
 );
 
 CREATE TABLE Address (
@@ -22,7 +22,7 @@ CREATE TABLE Address (
 CREATE TABLE Cart (
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT ,
     statusVenda BOOLEAN,
-    id_products int(),
+    id_products int()
 );
 
 CREATE TABLE Products (
@@ -30,7 +30,7 @@ CREATE TABLE Products (
     nameProduto VARCHAR(50),
     descricao VARCHAR(255),
     valor BIT,
-    id_category int,
+    id_category int
 );
 
 CREATE TABLE Category (
