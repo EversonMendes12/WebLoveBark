@@ -22,6 +22,11 @@ Print Index.jsp:
 ###### Update 0.0.1 
 
   - [ ] Integrado sistema login e cadastro.  [Realizando integração]
+    - [x] Página login e cadastro.
+    - [x] Sistema de login e cadastro implementado.
+    - [ ] Criando page para gerenciar account.
+    - [ ] Sistema gerencia account.
+    
 
 ###### Update 0.0.2
 
